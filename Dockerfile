@@ -19,4 +19,5 @@ tar xvzf augustus-3.2.2.tar.gz &&\
 cd augustus-3.2.2 &&\
 make &&\
 make install
-RUN export AUGUSTUS_CONFIG_PATH=/opt/augustus-3.2.2/config/
+ENV AUGUSTUS_CONFIG_PATH /opt/augustus-3.2.2/config/
+RUN chmod -R 777 /opt/augustus-3.2.2/config/species
